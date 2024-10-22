@@ -1,6 +1,6 @@
 package null
 
-import "github.com/wailsapp/wails/v2/internal/frontend"
+import "github.com/qimingzihaonanya1/wails/v2/internal/frontend"
 
 // OpenFileDialog does nothing
 func (f *Frontend) OpenFileDialog(dialogOptions frontend.OpenDialogOptions) (result string, err error) {

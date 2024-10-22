@@ -6,12 +6,12 @@ package hybrid
 import (
 	"context"
 
-	"github.com/wailsapp/wails/v2/internal/binding"
-	"github.com/wailsapp/wails/v2/internal/frontend"
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/null"
-	"github.com/wailsapp/wails/v2/internal/frontend/devserver"
-	"github.com/wailsapp/wails/v2/internal/logger"
-	"github.com/wailsapp/wails/v2/pkg/options"
+	"github.com/qimingzihaonanya1/wails/v2/internal/binding"
+	"github.com/qimingzihaonanya1/wails/v2/internal/frontend"
+	"github.com/qimingzihaonanya1/wails/v2/internal/frontend/desktop/null"
+	"github.com/qimingzihaonanya1/wails/v2/internal/frontend/devserver"
+	"github.com/qimingzihaonanya1/wails/v2/internal/logger"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/options"
 )
 
 // New returns a new Server frontend

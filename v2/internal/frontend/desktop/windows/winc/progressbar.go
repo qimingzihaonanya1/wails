@@ -7,7 +7,7 @@
 package winc
 
 import (
-	"github.com/wailsapp/wails/v2/internal/frontend/desktop/windows/winc/w32"
+	"github.com/qimingzihaonanya1/wails/v2/internal/frontend/desktop/windows/winc/w32"
 )
 
 type ProgressBar struct {

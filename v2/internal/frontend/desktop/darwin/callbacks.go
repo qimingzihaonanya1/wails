@@ -17,7 +17,7 @@ import (
 	"errors"
 	"strconv"
 
-	"github.com/wailsapp/wails/v2/pkg/menu"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/menu"
 )
 
 func (f *Frontend) handleCallback(menuItemID uint) error {

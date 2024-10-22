@@ -9,12 +9,11 @@ import (
 
 	"github.com/leaanthony/slicer"
 	"github.com/pterm/pterm"
-	"github.com/wailsapp/wails/v2/cmd/wails/flags"
-	"github.com/wailsapp/wails/v2/cmd/wails/internal/gomod"
-	"github.com/wailsapp/wails/v2/internal/colour"
-	"github.com/wailsapp/wails/v2/internal/project"
-	"github.com/wailsapp/wails/v2/pkg/clilogger"
-	"github.com/wailsapp/wails/v2/pkg/commands/build"
+	"github.com/qimingzihaonanya1/wails/v2/cmd/wails/flags"
+	"github.com/qimingzihaonanya1/wails/v2/internal/colour"
+	"github.com/qimingzihaonanya1/wails/v2/internal/project"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/clilogger"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/commands/build"
 )
 
 func buildApplication(f *flags.Build) error {
@@ -118,12 +117,12 @@ func buildApplication(f *flags.Build) error {
 		return err
 	}
 
-	if !f.NoSyncGoMod {
-		err = gomod.SyncGoMod(logger, f.UpdateWailsVersionGoMod)
-		if err != nil {
-			return err
-		}
-	}
+	//if !f.NoSyncGoMod {
+	//	err = gomod.SyncGoMod(logger, f.UpdateWailsVersionGoMod)
+	//	if err != nil {
+	//		return err
+	//	}
+	//}
 
 	// Check platform
 	validPlatformArch := slicer.String([]string{

@@ -10,7 +10,7 @@ import (
 	"net/http/httputil"
 	"net/url"
 
-	"github.com/wailsapp/wails/v2/pkg/options/assetserver"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/options/assetserver"
 )
 
 func NewProxyServer(proxyURL string) http.Handler {

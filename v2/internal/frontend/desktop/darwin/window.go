@@ -21,9 +21,9 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/wailsapp/wails/v2/pkg/menu"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/menu"
 
-	"github.com/wailsapp/wails/v2/pkg/options"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/options"
 )
 
 func init() {

@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/leaanthony/slicer"
+	"github.com/qimingzihaonanya1/wails/v2/internal/logger"
 	"github.com/stretchr/testify/assert"
-	"github.com/wailsapp/wails/v2/internal/logger"
 )
 
 type BindForTest struct {

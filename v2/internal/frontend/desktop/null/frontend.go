@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/wailsapp/wails/v2/internal/frontend"
-	"github.com/wailsapp/wails/v2/pkg/options"
+	"github.com/qimingzihaonanya1/wails/v2/internal/frontend"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/options"
 )
 
 // Frontend implements an empty Frontend that simply waits until the context is done.

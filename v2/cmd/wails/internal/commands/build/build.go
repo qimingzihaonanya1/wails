@@ -11,17 +11,17 @@ import (
 	"text/tabwriter"
 	"time"
 
-	"github.com/wailsapp/wails/v2/internal/colour"
-	"github.com/wailsapp/wails/v2/internal/project"
-	"github.com/wailsapp/wails/v2/internal/system"
+	"github.com/qimingzihaonanya1/wails/v2/internal/colour"
+	"github.com/qimingzihaonanya1/wails/v2/internal/project"
+	"github.com/qimingzihaonanya1/wails/v2/internal/system"
 
-	"github.com/wailsapp/wails/v2/cmd/wails/internal"
-	"github.com/wailsapp/wails/v2/internal/gomod"
+	"github.com/qimingzihaonanya1/wails/v2/cmd/wails/internal"
+	"github.com/qimingzihaonanya1/wails/v2/internal/gomod"
 
 	"github.com/leaanthony/clir"
 	"github.com/leaanthony/slicer"
-	"github.com/wailsapp/wails/v2/pkg/clilogger"
-	"github.com/wailsapp/wails/v2/pkg/commands/build"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/clilogger"
+	"github.com/qimingzihaonanya1/wails/v2/pkg/commands/build"
 )
 
 // AddBuildSubcommand adds the `build` command for the Wails application
@@ -185,25 +185,25 @@ func AddBuildSubcommand(app *clir.Cli, w io.Writer) {
 
 		// Create BuildOptions
 		buildOptions := &build.Options{
-			Logger:              logger,
-			OutputType:          outputType,
-			OutputFile:          outputFilename,
-			CleanBuildDirectory: cleanBuildDirectory,
-			Mode:                mode,
-			Pack:                !noPackage,
-			LDFlags:             ldflags,
-			Compiler:            compilerCommand,
-			SkipModTidy:         skipModTidy,
-			Verbosity:           verbosity,
-			ForceBuild:          forceBuild,
-			IgnoreFrontend:      skipFrontend,
-			Compress:            compress,
-			CompressFlags:       compressFlags,
-			UserTags:            userTags,
-			WebView2Strategy:    wv2rtstrategy,
-			TrimPath:            trimpath,
-			RaceDetector:        raceDetector,
-			WindowsConsole:      windowsConsole,
+			Logger:     logger,
+			OutputType: outputType,
+			OutputFile: outputFilename,
+			//CleanBuildDirectory: cleanBuildDirectory,
+			Mode:             mode,
+			Pack:             !noPackage,
+			LDFlags:          ldflags,
+			Compiler:         compilerCommand,
+			SkipModTidy:      skipModTidy,
+			Verbosity:        verbosity,
+			ForceBuild:       forceBuild,
+			IgnoreFrontend:   skipFrontend,
+			Compress:         compress,
+			CompressFlags:    compressFlags,
+			UserTags:         userTags,
+			WebView2Strategy: wv2rtstrategy,
+			TrimPath:         trimpath,
+			RaceDetector:     raceDetector,
+			WindowsConsole:   windowsConsole,
 		}
 
 		// Start a new tabwriter
@@ -219,7 +219,7 @@ func AddBuildSubcommand(app *clir.Cli, w io.Writer) {
 			_, _ = fmt.Fprintf(w, "Skip Frontend: \t%t\n", skipFrontend)
 			_, _ = fmt.Fprintf(w, "Compress: \t%t\n", buildOptions.Compress)
 			_, _ = fmt.Fprintf(w, "Package: \t%t\n", buildOptions.Pack)
-			_, _ = fmt.Fprintf(w, "Clean Build Dir: \t%t\n", buildOptions.CleanBuildDirectory)
+			//_, _ = fmt.Fprintf(w, "Clean Build Dir: \t%t\n", buildOptions.CleanBuildDirectory)
 			_, _ = fmt.Fprintf(w, "LDFlags: \t\"%s\"\n", buildOptions.LDFlags)
 			_, _ = fmt.Fprintf(w, "Tags: \t[%s]\n", strings.Join(buildOptions.UserTags, ","))
 			_, _ = fmt.Fprintf(w, "Race Detector: \t%t\n", buildOptions.RaceDetector)
@@ -348,7 +348,7 @@ func AddBuildSubcommand(app *clir.Cli, w io.Writer) {
 				}
 
 				buildOptions.IgnoreFrontend = true
-				buildOptions.CleanBuildDirectory = false
+				//buildOptions.CleanBuildDirectory = false
 
 				// Output stats
 				buildOptions.Logger.Println(fmt.Sprintf("Built '%s' in %s.\n", compiledBinary, time.Since(start).Round(time.Millisecond).String()))
@@ -405,7 +405,7 @@ func checkGoModVersion(logger *clilogger.CLILogger, updateGoMod bool) error {
 	}
 
 	if updateGoMod {
-		return syncGoModVersion(cwd)
+		//return syncGoModVersion(cwd)
 	}
 
 	logger.Println("Warning: go.mod is using Wails '%s' but the CLI is '%s'. Consider updating your project's `go.mod` file.\n", gomodversion.String(), internal.Version)

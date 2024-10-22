@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/wailsapp/wails/v2/internal/shell"
+	"github.com/qimingzihaonanya1/wails/v2/internal/shell"
 )
 
 // A list of package manager commands
